@@ -73,7 +73,17 @@ html, body {
     margin: 0;
 }
 
-#login-wrapper > form > input:first-child {
+.group-1 {
+    grid-area: input1;
+
+    display: flex;
+}
+
+.group-2 {
+    grid-area: input2;
+}
+
+.group-1 > input {
     border-top: 2px solid var(--input-border-color);
     border-bottom: 2px solid var(--input-border-color);
     border-left: none;
@@ -84,7 +94,7 @@ html, body {
     grid-area: input1;
 }
 
-#login-wrapper > form > input:nth-child(2) {
+.group-2 > input {
     border-top: none;
     border-bottom: 2px solid var(--input-border-color);
     border-left: none;
@@ -93,8 +103,10 @@ html, body {
     grid-area: input2;
 }
 
-#login-wrapper > form > input:first-child, #login-wrapper > form > input:nth-child(2) { 
+.group-1 > input, .group-2 > input { 
     box-sizing: border-box;
+
+    position: relative;
 
     padding: 10px 50px 10px 50px;
     margin: 0;
@@ -167,4 +179,39 @@ html, body {
 
 #login-wrapper > form > a:hover {
     color: rgb(113, 113, 141);
+}
+
+/* Icons inside of the input fields */
+.email-icon {
+    display: block;
+
+    height: 40px;
+    width: 40px;
+
+    background-image: url("/assets/img/email-icon.png");
+
+    background-size: cover;
+
+    position: absolute;
+
+    top: 8.35rem;
+
+    z-index: 2;
+}
+
+.password-icon {
+    display: block;
+
+    height: 40px;
+    width: 40px;
+
+    background-image: url("/assets/img/password-icon.png");
+
+    background-size: cover;
+
+    position: absolute;
+
+    top: 10.9rem;
+
+    z-index: 2;
 }
