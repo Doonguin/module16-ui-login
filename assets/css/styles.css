@@ -55,13 +55,6 @@ html, body {
     color: var(--text-color);
 }
 
-#login-wrapper > h2 > span {
-    background: -webkit-linear-gradient(0deg, rgb(255, 180, 40), rgb(255, 123, 0));
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
 /* Form styling because by default it looks like shit */
 #login-wrapper > form {
     width: 100%;
@@ -103,7 +96,7 @@ html, body {
 #login-wrapper > form > input:first-child, #login-wrapper > form > input:nth-child(2) { 
     box-sizing: border-box;
 
-    padding: 10px 0px 10px 20px;
+    padding: 10px 50px 10px 50px;
     margin: 0;
 
     width: 100%;
@@ -112,6 +105,10 @@ html, body {
     outline: none;
 
     background-color: rgb(47, 48, 65);
+
+    color: white;
+
+    font-size: 15px;
 }
 
 #login-wrapper > form > input[type="submit"] {
@@ -124,7 +121,7 @@ html, body {
 
     padding: 10px;
 
-    background-color: transparent;
+    background: transparent;
 
     border-image-source: linear-gradient(45deg, orange, purple);
     border-image-slice: 1;
@@ -147,7 +144,15 @@ html, body {
 
     align-self: center;
 
-    transition: border-image-source .5s ease-in-out;
+    transition: background .5s ease-in-out;
+}
+
+#login-wrapper > form > input[type="submit"]:hover { 
+    background: linear-gradient(45deg, orange, purple);
+
+    color: white;
+
+    -webkit-text-fill-color: white;
 }
 
 #login-wrapper > form > a {
@@ -158,4 +163,8 @@ html, body {
     align-self: center;
 
     grid-area: forgot;
+}
+
+#login-wrapper > form > a:hover {
+    color: rgb(113, 113, 141);
 }
